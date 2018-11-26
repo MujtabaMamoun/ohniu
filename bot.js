@@ -29,13 +29,13 @@ client.on('ready', () => {
 
 
 
-const adminprefix = "$";
+const adminprefix = "*";
 const devs = ['406857707832737803'];
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
 
-    if (message.content.startsWith(adminprefix + 'setstreem')) {
+    if (message.content.startsWith(adminprefix + 'sets')) {
         client.user.setGame(argresult, "https://www.twitch.tv/idk");
         message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
     }
